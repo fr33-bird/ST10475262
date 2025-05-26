@@ -51,4 +51,32 @@ public class RegisterTest {
         assertEquals("Username or password incorrect, please try again.",
                 register.returnLoginStatus(false));
     }
+
+    /**
+     * Test of setUsername method, of class Register.
+     */
+    @Test
+    public void testSetUsername() {
+    }
+
+    /**
+     * Test of setPassword method, of class Register.
+     */
+    @Test
+    public void testSetPassword() {
+    }
+
+    /**
+     * Test of setCellPhone method, of class Register.
+     */
+    @Test
+    public void testSetCellPhone() {
+    }
+
+    /**
+     * Test of registerUser method, of class Register.
+     */
+    @Test
+    public void testRegisterUser() {
+    }
 }

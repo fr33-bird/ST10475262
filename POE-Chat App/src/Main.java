@@ -14,6 +14,7 @@ public class Main {
                         + "underscore and is no more than five characters in length.");
             } else {
                 r.setUsername(inputUsername);
+                 JOptionPane.showMessageDialog(null,"Username successfully captured.");
             }
         
         
@@ -27,6 +28,7 @@ public class Main {
                         + " least eight characters, a capital letter, a number, and a special character.");
             } else {
                 r.setPassword(inputPassword);
+                 JOptionPane.showMessageDialog(null,"Password successfully captured.");
             }
         
         
@@ -39,6 +41,7 @@ public class Main {
                 JOptionPane.showMessageDialog(null,"Cell phone number incorrectly formatted or does not contain international code.");
             } else {
                 r.setCellPhone(inputCellPhone);
+                JOptionPane.showMessageDialog(null,"Cellphone number successfully captured.");
             }
         
         boolean login= false;
@@ -46,9 +49,22 @@ public class Main {
             String loginName = JOptionPane.showInputDialog("Enter username:");
             String loginPass = JOptionPane.showInputDialog("Enter password:");
             
-            login = r.loginUser(loginName, loginPass);
-            String loginStatus = r.returnLoginStatus(login);
+            if(loginName.equals(inputUsername) && loginPass.equals(inputPassword)){
+                JOptionPane.showMessageDialog(null,"You have successfully logged in");
+                
+                try{
+                    QuickChat chat = new QuickChat();
+                    chat.start();
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog(null,"Couldn't start app");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Username or password incorrect.");
+            }
         
+       
+       
     }
 }
 
